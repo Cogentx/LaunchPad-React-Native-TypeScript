@@ -8,7 +8,11 @@ import StackNavigator from './src/StackNavigator';
 export default function App() {
   return (
     <TailwindProvider utilities={utilities}>
-      <StackNavigator />
+      {/* HOC - Higher Order Component - wraps children components */}
+      <AuthProvider>
+        {/* passes down auth info to child components */}
+        <StackNavigator />
+      </AuthProvider>
     </TailwindProvider>
   );
 }
