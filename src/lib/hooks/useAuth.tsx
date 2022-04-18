@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useContext } from 'react';
 import { View, Text } from 'react-native';
 
 type Props = {
@@ -8,8 +8,11 @@ type Props = {
 // initially empty object
 const AuthContext = createContext({});
 
-const AuthProvider = ({ children }: Props) => {
-  return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
+export const AuthProvider = ({ children }: Props) => {
+  return <AuthContext.Provider value={{ user: 'cogentx' }}>{children}</AuthContext.Provider>;
 };
 
-export default AuthProvider;
+// Custom Hook - useAuth
+export default function useAuth() {
+  return useContext(AuthContext);
+}

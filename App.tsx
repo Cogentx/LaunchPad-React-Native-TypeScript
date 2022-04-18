@@ -4,6 +4,7 @@ import { TailwindProvider } from 'tailwind-rn';
 import utilities from './tailwind.json';
 import { NavigationContainer } from '@react-navigation/native';
 import StackNavigator from './src/StackNavigator';
+import { AuthProvider } from './src/lib/hooks/useAuth';
 
 export default function App() {
   return (

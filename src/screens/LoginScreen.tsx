@@ -1,13 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from 'react-native';
+import React from 'react';
+import useAuth from '../lib/hooks/useAuth';
 
 const LoginScreen = () => {
-
   return (
     <View>
-      <Text>LoginScreen</Text>
+      <Text>Login</Text>
     </View>
-  )
-}
+  );
+};
 
-export default LoginScreen
+export default LoginScreen;

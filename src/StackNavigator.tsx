@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
 import ChatScreen from './screens/ChatScreen';
 import LoginScreen from './screens/LoginScreen';
+import useAuth from './lib/hooks/useAuth';
 
 export type StackParams = {
   Home: undefined;
@@ -15,7 +16,7 @@ export type StackParams = {
 const Stack = createNativeStackNavigator<StackParams>();
 
 const StackNavigator = () => {
-  const user = true;
+  const user = useAuth();
 
   return (
     <NavigationContainer>
